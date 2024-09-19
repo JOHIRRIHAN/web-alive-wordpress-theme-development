@@ -1,0 +1,50 @@
+/*
+Theme Name: Web Alive
+Theme URI: https://www.webalive.com/theme
+Author: Johir Rihan
+Author URI: https://www.webalive.com
+Description: A custom WordPress theme for Web Alive.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: web-alive
+Tags: custom-theme, responsive, blog, e-commerce
+*/
+
+
+
+.text-container{
+    margin-left: 250px;
+}
+@media screen and (max-width: 768px) {
+    .text-container {
+        margin-left: 0;
+    }
+}
+.img-style{
+    width: 90%;
+    right: 0;
+    height: 100px;
+    background: #fff;
+    position: absolute; 
+    margin-top: -90px;
+}
+.border-style{
+    margin-left: 50px;
+}
+.exprience-card{
+    padding: 150px;
+}
+.value-title{
+    font-size: 65px;
+    font-weight: 600;
+    padding: 50px;
+}
+.tools-title{
+    font-size: 65px;
+    font-weight: 600;
+    
+}
+.hero-title{
+    font-size: 40px;
+}
