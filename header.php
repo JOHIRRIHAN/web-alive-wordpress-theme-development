@@ -34,6 +34,10 @@
             font-weight: 700;
             
         }
+        .width-fix{
+            width: 600px;
+            letter-spacing: 3px;
+        }
 
     </style>
     

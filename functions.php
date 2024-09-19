@@ -67,7 +67,8 @@ add_action('widgets_init', 'my_theme_widgets_init');
     require_once get_template_directory() . '/second-hero-function.php';
     require_once get_template_directory() . '/brandlogo-function.php';
     require_once get_template_directory() . '/web-service-function.php';
+    require_once get_template_directory() . '/all-hero-short-code-function.php';
 
 
- 
+  
 ?>
