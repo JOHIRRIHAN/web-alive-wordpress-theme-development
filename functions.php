@@ -68,7 +68,23 @@ add_action('widgets_init', 'my_theme_widgets_init');
     require_once get_template_directory() . '/brandlogo-function.php';
     require_once get_template_directory() . '/web-service-function.php';
     require_once get_template_directory() . '/all-hero-short-code-function.php';
+    require_once get_template_directory() . '/ecommerce-hero_section-function.php';
+    require_once get_template_directory() . '/review-function.php';
+    require_once get_template_directory() . '/ecommerce-hero2-function.php';
+    require_once get_template_directory() . '/ecommerce-what-sets-webalive-function.php';
+    require_once get_template_directory() . '/Get_all_the_advanced_features-function.php';
+    require_once get_template_directory() . '/ecommerce-design-process-function.php';
+    require_once get_template_directory() . '/platform-card-function.php';
+    require_once get_template_directory() . '/img-short-code-function.php';
+    require_once get_template_directory() . '/web-application-function.php';
+    require_once get_template_directory() . '/mobile-app-development-function.php';
+    require_once get_template_directory() . '/online-marketing-function.php';
+    require_once get_template_directory() . '/website-design-function.php';
+    require_once get_template_directory() . '/WooCommerce_development_services-function.php';
+    require_once get_template_directory() . '/shopify-development-services-function.php';
 
 
-  
+
+    // sample 
+    
 ?>

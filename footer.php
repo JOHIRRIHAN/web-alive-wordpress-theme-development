@@ -86,6 +86,68 @@
     <?php wp_footer(); ?>
 
     <script src="<?php echo get_template_directory_uri(); ?>./main.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+  var swiper = new Swiper(".multiple-slide-carousel", {
+    loop: true,
+    slidesPerView: 5,
+    spaceBetween: 20,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      1920: {
+        slidesPerView: 5, // 4 slides on large screens
+        spaceBetween: 30
+      },
+      1028: {
+        slidesPerView: 4, // 3 slides on medium screens
+        spaceBetween: 30
+      },
+      990: {
+        slidesPerView: 3, // 2 slides on smaller screens
+        spaceBetween: 20
+      },
+      768: {
+        slidesPerView: 1, // 1 slide on mobile
+        spaceBetween: 10
+      }
+    }
+  });
+});
+jQuery(document).ready(function($) {
+    $('.upload_image_button').click(function(e) {
+        e.preventDefault();
+        var button = $(this);
+        var custom_uploader = wp.media({
+            title: 'Upload Image',
+            button: {
+                text: 'Use this image'
+            },
+            multiple: false
+        }).on('select', function() {
+            var attachment = custom_uploader.state().get('selection').first().toJSON();
+            $('#platform_image').val(attachment.url);
+        }).open();
+    });
+});
+document.getElementById('category-select').addEventListener('change', function() {
+    var selectedCategory = this.value;
+    // Add your logic to filter content based on selectedCategory
+    console.log('Selected category: ' + selectedCategory);
+});
+document.getElementById('search-icon').addEventListener('click', function() {
+    var searchBar = document.getElementById('search-bar');
+    if (searchBar.classList.contains('hidden')) {
+        searchBar.classList.remove('hidden');
+    } else {
+        searchBar.classList.add('hidden');
+    }
+});
+
+    </script>
 </body>
 </html>
 

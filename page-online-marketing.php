@@ -28,7 +28,49 @@ get_header();
     </main><!-- #main -->
     </div><!-- #primary -->
 
-<h3>Online marketing development page</h3>
+    <?php
+$args = array('post_type' => 'online_marketing', 'posts_per_page' => 10);
+$marketing_query = new WP_Query($args);
+
+if ($marketing_query->have_posts()) :
+    echo '<div class="flex flex-col w-full max-w-6xl mx-auto">'; // Wrapper for the cards
+
+    while ($marketing_query->have_posts()) : $marketing_query->the_post();
+        $image = get_post_meta(get_the_ID(), '_online_marketing_image', true);
+        $heading = get_post_meta(get_the_ID(), '_online_marketing_heading', true);
+        $paragraph = get_post_meta(get_the_ID(), '_online_marketing_paragraph', true);
+        $button_url = get_post_meta(get_the_ID(), '_online_marketing_button_url', true);
+        
+        // Set background color based on card number
+        $bg_color = ($marketing_query->current_post === 1 || $marketing_query->current_post === 3) ? 'bg-black' : 'bg-base-200';
+        $text_color = ($marketing_query->current_post === 1 || $marketing_query->current_post === 3) ? 'text-white' : 'text-black';
+
+        ?>
+        <div class="<?php echo esc_attr($bg_color); ?> min-h-screen flex items-center justify-center mb-10">
+            <div class="flex flex-col lg:flex-row w-full">
+                <!-- Image Section (50%) -->
+                <div class="w-full lg:w-1/2 flex justify-center lg:justify-end p-5">
+                    <img src="<?php echo esc_url($image); ?>" class="max-w-full" />
+                </div>
+
+                <!-- Text Section (50%) -->
+                <div class="w-full lg:w-1/2 flex flex-col justify-center p-5 <?php echo esc_attr($text_color); ?>">
+                    <h1 class="text-3xl font-bold"><?php echo esc_html($heading); ?></h1>
+                    <p class="py-6">
+                        <?php echo esc_html($paragraph); ?>
+                    </p>
+                    <button class="text-2xl font-semibold"><a href="http://localhost/web_alive/contact-us/">Get In Touch <i class='bx bx-right-arrow-alt text-[#f47521]'></i></a></button>
+                </div>
+            </div>
+        </div>
+        <?php
+    endwhile;
+    wp_reset_postdata();
+
+    echo '</div>'; // Close wrapper
+endif;
+?>
+
 
 
     <?php get_footer(); ?>

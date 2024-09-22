@@ -29,8 +29,37 @@ get_header();
     </div><!-- #primary -->
 
 <section>
-    <h3>search</h3>
-    <h3>catagory</h3>
+    <div class="flex text-xl font-semibold p-5">
+    <div class="search-container">
+    <h3 id="search-icon" class="cursor-pointer flex items-center">
+        <i class='bx bx-search text-2xl mr-2'></i> Search
+    </h3>
+    
+    <!-- Hidden Search Bar -->
+    <div id="search-bar" class="hidden mt-3">
+        <input type="text" placeholder="Search..." class="border p-2 rounded w-full">
+    </div>
+</div>
+
+    <p class="mx-5">|</p>
+    <h3>Select Category</h3>
+    <select name="category" id="category-select" class=" p-1 rounded">
+        <option value="all">All</option>
+        <option value="app-development">App Development</option>
+        <option value="artificial-intelligence">Artificial Intelligence</option>
+        <option value="business">Business</option>
+        <option value="ecommerce">Ecommerce</option>
+        <option value="ecommerce-design">Ecommerce Design</option>
+        <option value="guest-post">Guest Post</option>
+        <option value="marketing">Marketing</option>
+        <option value="medical-website">Medical Website</option>
+        <option value="news">News</option>
+        <option value="tips-tutorials">Tips & Tutorials</option>
+        <option value="web-design">Web Design</option>
+        <option value="wordpress">WordPress</option>
+    </select>
+
+    </div>
 
 
     <div>

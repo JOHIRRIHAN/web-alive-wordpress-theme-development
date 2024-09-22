@@ -217,11 +217,11 @@ endif;
                     <div class="group">
                         <figure class="w-full overflow-hidden">
                             <?php if ($project_image_url) : ?>
-                                <img
+                                <a href="#"><img
                                     src="<?php echo esc_url($project_image_url); ?>"
                                     alt="<?php the_title_attribute(); ?>"
                                     class="w-full h-auto transition-transform duration-500 ease-in-out transform group-hover:scale-110"
-                                />
+                                /></a>
                             <?php else : ?>
                                 <img
                                     src="<?php echo get_template_directory_uri(); ?>/images/default-placeholder.png"
@@ -232,7 +232,7 @@ endif;
                         </figure>
                         <div class="mt-4">
                             <h2 class="text-lg"><?php echo esc_html($project_heading); ?></h2>
-                            <h2 class="text-3xl font-bold"><?php the_title(); ?></h2>
+                            <h2 class="text-3xl font-bold hover:text-orange-400"><a href="#"><?php the_title(); ?></a></h2>
                             <p><?php echo esc_html($project_paragraph); ?></p>
                         </div>
                     </div>
@@ -246,7 +246,7 @@ endif;
         </div>
 
         <div class="md:my-20 flex justify-center">
-            <button class="btn btn-outline px-20">Default</button>
+            <button class="btn btn-outline px-20"><a href="http://localhost/web_alive/portfolio/">See All Project</a></button>
         </div>
     </section>
 
@@ -324,7 +324,7 @@ endif;
                     $hero_descriptions = get_theme_mod('hero_descriptions', 'Our ability to build on any platform willingness to adapt to the client’s needs make us the ideal web solutions provider. Working with WebAlive means you can be as hands-on as you wish! While we do have our own growth in mind, our main focus is always to add value to our customers by refining their ideas and realising their goals through our decade-long expertise and experience.'); 
                     echo wp_kses_post($hero_descriptions); ?>
                     </p>
-                    <a href="<?php echo esc_url(get_theme_mod('hero_button_link', '#')); ?>" class="btn btn-primary">Learn more</a>
+                    <a href="<?php echo esc_url(get_theme_mod('hero_button_link', '#')); ?>" class="border-b-2 border-black text-xl hover:text-orange-500">Learn more</a>
                 </div>
             </div>
         </div>
@@ -435,9 +435,9 @@ endif;
             </div>
 
             <div>
-                <a href="#" class="flex items-center justify-center my-20">
+                <a href="http://localhost/web_alive/blog/" class="flex items-center justify-center my-20">
                     <button class="btn bg-white border-2 border-black text-lg hover:bg-black hover:text-white hover:border-none">
-                        View more insight <i class='bx bx-right-arrow-alt'></i>
+                        View All insight <i class='bx bx-right-arrow-alt'></i>
                     </button>
                 </a>
             </div> 

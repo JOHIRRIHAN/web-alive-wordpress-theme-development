@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- swiper css  -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <style>
         .btn-text-style {
@@ -38,6 +40,47 @@
             width: 600px;
             letter-spacing: 3px;
         }
+        .checked {
+            color: orange;
+        }
+        /* CSS Code */
+        .swiper-wrapper {
+        width: 100%;
+        height: max-content !important;
+        padding-bottom: 64px !important;
+        -webkit-transition-timing-function: linear !important;
+        transition-timing-function: linear !important;
+        position: relative;
+        }
+
+        .swiper-pagination-bullet {
+        background: #4f46e5;
+        }
+        .swiper-slide{
+            height: 400px;
+            background-color: white;
+            color: black;
+            border-left: 5px solid #22b0af;
+            padding: 10px;
+        }
+        .number-color{
+            color: #22b0af;
+        }
+        .cards{
+            background-color: #95BF47;
+            color: white;
+            padding: 20px;
+            border-radius: 12px; 
+            height: 400px;
+        }
+        .cards2{
+            background-color: #1199C4;
+            color: white;
+            padding: 20px;
+            border-radius: 12px; 
+            height: 400px;
+        }
+
 
     </style>
     

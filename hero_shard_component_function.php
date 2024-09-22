@@ -30,3 +30,4 @@ function recent_work2_shortcode($atts) {
     return ob_get_clean();
 }
 add_shortcode('recent_work2', 'recent_work2_shortcode');
+
