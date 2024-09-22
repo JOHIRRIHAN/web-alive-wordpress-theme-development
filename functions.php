@@ -84,7 +84,24 @@ add_action('widgets_init', 'my_theme_widgets_init');
     require_once get_template_directory() . '/shopify-development-services-function.php';
 
 
-
-    // sample 
+    function my_style_theme_enqueue_styles() {
+        wp_enqueue_style('my-theme-style', get_template_directory_uri() . '/style.css');
+    }
+    add_action('wp_enqueue_scripts', 'my_style_theme_enqueue_styles');
+    
+    
+    
+    
+    function enqueue_custom_scripts() {
+        wp_enqueue_script(
+            'main-js', // Handle name for the script
+            get_template_directory_uri() . '/main.js', // Path to the script
+            array(), // Dependencies (if any)
+            null, // Version (null to not add a version number)
+            true // Load the script in the footer (set to false to load in the header)
+        );
+    }
+    add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
+    
     
 ?>

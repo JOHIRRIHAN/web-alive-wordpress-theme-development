@@ -48,3 +48,75 @@ Tags: custom-theme, responsive, blog, e-commerce
 .hero-title{
     font-size: 40px;
 }
+.btn-text-style {
+    font-size: 20px;
+    font-weight: 700;
+    background: #f47521;
+    padding: 10px 25px;
+    color: #ffffff; /* Ensure text is visible on the background */
+    border: none; /* Remove default border if needed */
+    text-align: center; /* Center text */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background 0.3s ease; /* Smooth transition for background change */
+}
+
+.btn-text-style:hover {
+    background: white;
+    color: #f47521; /* Optional: change text color on hover */
+}
+.hero-title{
+    font-size: 60px;
+    font-weight: 700;
+    
+}
+.width-fix{
+    width: 600px;
+    letter-spacing: 3px;
+}
+.checked {
+    color: orange;
+}
+/* CSS Code */
+.swiper-wrapper {
+width: 100%;
+height: max-content !important;
+padding-bottom: 64px !important;
+-webkit-transition-timing-function: linear !important;
+transition-timing-function: linear !important;
+position: relative;
+}
+
+.swiper-pagination-bullet {
+background: #4f46e5;
+}
+.swiper-slide{
+    height: 400px;
+    background-color: white;
+    color: black;
+    border-left: 5px solid #22b0af;
+    padding: 10px;
+}
+.number-color{
+    color: #22b0af;
+}
+.cards{
+    background-color: #95BF47;
+    color: white;
+    padding: 20px;
+    border-radius: 12px; 
+    height: 400px;
+}
+.cards2{
+    background-color: #1199C4;
+    color: white;
+    padding: 20px;
+    border-radius: 12px; 
+    height: 400px;
+}
+.active-filter {
+font-weight: bold;
+color: #f47521;
+}
+.our-project{
+    background: #e5e7eb;
+}

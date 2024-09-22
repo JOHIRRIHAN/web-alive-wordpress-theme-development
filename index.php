@@ -10,27 +10,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <!-- FontAwesome CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
-    <style>
-        .btn-text-style {
-            font-size: 20px;
-            font-weight: 700;
-            background: #f47521;
-            padding: 10px 25px;
-            color: #ffffff; /* Ensure text is visible on the background */
-            border: none; /* Remove default border if needed */
-            text-align: center; /* Center text */
-            cursor: pointer; /* Change cursor to pointer */
-            transition: background 0.3s ease; /* Smooth transition for background change */
-        }
-
-        .btn-text-style:hover {
-            background: white;
-            color: #f47521; /* Optional: change text color on hover */
-        }
-
-    </style>
+    <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
 
     <?php wp_head(); ?>
 </head>
