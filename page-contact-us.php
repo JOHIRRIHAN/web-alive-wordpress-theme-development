@@ -20,9 +20,9 @@
 </head>
 <body class=" font-sans">
     <header class="">
-        <div class="container mx-auto py-10 px-6 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-orange-500"><img src="https://www.webalive.com.au/wp-content/uploads/2019/08/company-logo-color.png" alt="logo"></h1>
-            <a href="<?php echo home_url(); ?>" class="text-2xl font-semibold hover:text-gray-800">← Back to home page</a>
+        <div class="container mx-auto py-10 md:px-6 flex justify-between items-center">
+            <img src="https://www.webalive.com.au/wp-content/uploads/2019/08/company-logo-color.png" alt="logo">
+            <a href="<?php echo home_url(); ?>" class="text-2xl font-semibold hover:text-gray-800 flex"><span>← Back </span> <span class="hidden md:flex"> to home page</span></a>
         </div>
     </header>
     <main class="container mx-auto py-8 px-6">
@@ -82,7 +82,7 @@
                 </div>
                 <div class="w-full md:w-1/2 p-10 bg-white">
                     <div class="flex flex-col">
-                        <div class="flex gap-20">
+                        <div class="lg:flex gap-20">
                             <div class="mb-8">
                                 <h3 class="text-4xl font-bold mb-2">Call Us</h3>
                                 <p class="text-gray-600 text-xl"><?php echo esc_html($phone); ?></p>

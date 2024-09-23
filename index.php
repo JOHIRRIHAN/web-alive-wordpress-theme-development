@@ -99,9 +99,9 @@
     
         <!-- Hero Section -->
         <div class=" px-4 sm:px-3 lg:px-8 z-10 h-full md:text-left">
-            <div class="text-white md:w-[50%]">
+            <div class="text-white md:w-[70%]">
                 <p class="md:text-lg my-8 lg:my-0 lg:mb-4"><?php echo esc_html($hero_subtitle); ?></p>
-                <h3 class="sm:text-4xl md:text-4xl lg:text-6xl font-bold md:leading-tight my-8 lg:my-0 lg:mb-6"><?php echo esc_html($hero_title); ?></h3>
+                <h3 class="text-3xl md:text-5xl  font-bold md:leading-tight my-8 lg:my-0 lg:mb-6"><?php echo esc_html($hero_title); ?></h3>
                 <a href="<?php echo esc_url($hero_button_url); ?>">
                     <button class="text-white border-2 border-white px-4 md:px-6 py-3 flex items-center justify-center text-lg lg:mt-10 font-semibold hover:bg-white hover:text-black ">
                     <?php echo esc_html($hero_button_text); ?> <i class='bx bx-right-arrow-alt text-2xl pl-4'></i>

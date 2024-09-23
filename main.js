@@ -80,7 +80,11 @@ filterLinks.forEach(function (link) {
         this.classList.add('active-filter');
     });
 });
-
+document.getElementById('filterToggle').addEventListener('click', function() {
+    const filterLinks = document.getElementById('filterLinks');
+    filterLinks.classList.toggle('hidden'); // Toggles the 'hidden' class
+});
+alert('alert');
 
 
 document.addEventListener("DOMContentLoaded", function () {

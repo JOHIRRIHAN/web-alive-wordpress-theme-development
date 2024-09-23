@@ -87,7 +87,12 @@
 
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="<?php echo get_template_directory_uri(); ?>/main.js"></script>
-
+    <script>
+        document.getElementById('filterToggle').addEventListener('click', function() {
+        const filterLinks = document.getElementById('filterLinks');
+        filterLinks.classList.toggle('hidden'); // Toggles the 'hidden' class
+        });
+    </script>
 </body>
 </html>
 

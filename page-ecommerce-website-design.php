@@ -9,13 +9,15 @@ get_header();
   style="background-image: url('<?php echo esc_url(get_theme_mod('hero_bg_image', 'https://www.webalive.com.au/wp-content/uploads/2023/09/ecomerce-banner-up.png')); ?>');">
   <div class="absolute"></div>
   <div class="">
-    <div class="max-w-md text-white px-10  width-fix">
+    <div class="md:max-w-md text-white px-10  md:width-fix">
       <h1 class=" text-4xl font-bold md:text-5xl leading-tight">
         <?php echo esc_html(get_theme_mod('hero_title', 'Get an ecommerce website that sells more and drives higher ROI')); ?>
       </h1>
-      <a href="<?php echo esc_url(get_theme_mod('hero_button_url', '#')); ?>" class="border hero-btn px-6 py-3 text-white rounded hover:bg-white hover:text-black font-bold">
-        <?php echo esc_html(get_theme_mod('hero_button_text', 'View all Portfolio')); ?>
+      <button class="my-10">
+      <a href="<?php echo esc_url(get_theme_mod('hero_button_url', '#')); ?>" class="border flex items-center hero-btn px-10 py-3 text-white rounded hover:bg-white hover:text-black font-bold">
+        <?php echo esc_html(get_theme_mod('hero_button_text', 'View all Portfolio')); ?><i class='bx bx-right-arrow-alt text-3xl'></i>
       </a>
+      </button>
     </div>
   </div>
 </div>
@@ -90,7 +92,7 @@ get_header();
         <h3 class="text-5xl font-bold text-center"><?php echo esc_html(get_theme_mod('unique_section_title', 'What sets WebAlive apart from the rest?')); ?></h3>
         <p class="text-center my-10 font-bold"><?php echo esc_html(get_theme_mod('unique_section_description', 'Bringing a website design to life demands a diverse professional team. Trust us. With 19 years of experience and a consistent track record, we are well-versed in the field.')); ?></p>
     </div>
-    <div class="grid grid-cols-1 md:grid-cols-3">
+    <div class="grid grid-cols-1 lg:grid-cols-3">
         <div>
             <div class="w-96">
                 <h3 class="text-2xl font-bold"><?php echo esc_html(get_theme_mod('unique_section_text_1', 'Top local expert 1')); ?></h3>

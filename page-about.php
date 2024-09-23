@@ -46,7 +46,7 @@ get_header();
                 $image_url = get_post_meta(get_the_ID(), '_image_url', true);
                 ?>
 
-                <h3 class="text-5xl p-5 font-bold -tracking-tighter leading-tight">
+                <h3 class="text-2xl md:text-5xl p-5 font-bold -tracking-tighter leading-tight">
                     <?php echo esc_html($section_title); ?>
                 </h3>
 
@@ -179,7 +179,7 @@ endif;
 ?>
     </div>
 
-    <div class="flex items-center justify-between exprience-card">
+    <div class="grid grid-cols-1 md:grid-cols-3">
         <div>
             <h3 class="text-5xl font-bold text-center">15+</h3>
             <p class="text-xl mt-8 text-center">Years of Experience</p>
@@ -195,9 +195,9 @@ endif;
     </div>
 </section>
 
-<section class="w-full h-screen bg-black text-white">
-    <h3 class="value-title">Our Values</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 px-10">
+<section class="w-full h-full bg-black text-white">
+    <h3 class="text-4xl font-bold my-10 md:value-title">Our Values</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 md:px-10">
         <?php
         $args = array(
             'post_type' => 'values',
@@ -212,10 +212,10 @@ endif;
                 $value_title = get_post_meta(get_the_ID(), '_value_title', true); // New field
                 $value_description = get_post_meta(get_the_ID(), '_value_description', true); // New field
                 ?>
-                <div class="w-96">
+                <div class="md:w-96 p-5">
                     <div class="flex items-center">
                         <h6 class="font-bold"><?php echo esc_html($value_number); ?></h6>
-                        <hr class="w-96">
+                        <hr class="md:w-96">
                     </div>
                     <?php if ($value_icon_url) : ?>
                         <img src="<?php echo esc_url($value_icon_url); ?>" alt="<?php echo esc_attr($value_title); ?>" class="w-12 my-10">
@@ -234,7 +234,7 @@ endif;
 </section>
 
 <section class="px-10 my-20">
-    <h3 class="tools-title">Our Tools & Technologies</h3>
+    <h3 class="text-4xl font-bold md:tools-title">Our Tools & Technologies</h3>
     <p class="text-xl my-10">Our multidisciplinary team and industry partners give you access to an extensive network of services, tools, and technologies.</p>
 
     <div class="pt-20 grid grid-cols-3 gap-10">

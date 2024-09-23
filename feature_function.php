@@ -4,7 +4,7 @@ function create_project_post_type() {
     register_post_type('project',
         array(
             'labels' => array(
-                'name' => __('Projects'),
+                'name' => __('Featured Projects'),
                 'singular_name' => __('Project'),
             ),
             'public' => true,

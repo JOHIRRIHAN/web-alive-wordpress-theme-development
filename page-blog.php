@@ -29,7 +29,7 @@ get_header();
     </div><!-- #primary -->
 
 <section>
-    <div class="flex text-xl font-semibold p-5">
+    <div class="md:flex text-xl font-semibold p-5">
     <div class="search-container">
     <h3 id="search-icon" class="cursor-pointer flex items-center">
         <i class='bx bx-search text-2xl mr-2'></i> Search
@@ -41,7 +41,7 @@ get_header();
     </div>
 </div>
 
-    <p class="mx-5">|</p>
+    <p class="mx-5 hidden md:flex">|</p>
     <h3>Select Category</h3>
     <select name="category" id="category-select" class=" p-1 rounded">
         <option value="all">All</option>
@@ -83,35 +83,43 @@ get_header();
                             <?php if ($image_url) : ?>
                                 <img src="<?php echo esc_url($image_url); ?>" class="w-full lg:w-1/2 object-cover" alt="Blog Hero Image"/>
                             <?php endif; ?>
+
                             <div class="w-full lg:w-1/2 lg:px-10 mt-6 lg:mt-0">
                                 <?php if ($heading) : ?>
-                                    <div class="flex items-center">
-                                    <a class="text-xl font-semibold hover:text-orange-500 my-10"><?php echo esc_html($heading); ?></a>
-                                    <hr class="border-t-2 border-black my-2 w-96 ">
+                                    <div class="flex flex-col lg:flex-row items-center lg:items-start">
+                                        <a class="text-xl font-semibold hover:text-orange-500 mb-4 lg:mb-0 lg:mr-4">
+                                            <?php echo esc_html($heading); ?>
+                                        </a>
+                                        <hr class="border-t-2 border-black my-2 w-full lg:w-96">
                                     </div>
                                 <?php endif; ?>
+
                                 <?php if ($title) : ?>
-                                    <a class="text-5xl font-bold block hover:text-orange-500 cursor-pointer my-4"><?php echo esc_html($title); ?></a>
+                                    <a class="text-3xl sm:text-4xl md:text-5xl font-bold block hover:text-orange-500 cursor-pointer my-4">
+                                        <?php echo esc_html($title); ?>
+                                    </a>
                                 <?php endif; ?>
+
                                 <?php if ($paragraph) : ?>
-                                    <p class="py-6"><?php echo wp_kses_post($paragraph); ?></p>
+                                    <p class="py-4 sm:py-6 text-base sm:text-lg">
+                                        <?php echo wp_kses_post($paragraph); ?>
+                                    </p>
                                 <?php endif; ?>
                             </div>
                         </div>
                     </div>
-
-                <?php
-                endwhile;
-                wp_reset_postdata();
-            else :
-                echo '<p>No Blog Hero content found</p>';
-            endif;
-            ?>
+                    <?php
+                    endwhile;
+                    wp_reset_postdata();
+                else :
+                    echo '<p>No Blog Hero content found</p>';
+                endif;
+                ?>
 
 
     </div>
     
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-20">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-2 md:px-20">
         <?php
             $args = array(
                 'post_type' => 'blog_post',  // The slug of your custom post type
